@@ -40,7 +40,10 @@ const persons = [
 ];
 ---
 
-<Layout title="FSTC - Employees">
+<Layout
+	title="Meet the Team at Food Safety Training Corporation (FSTC) - Our Experts in Food Safety Training and Certification"
+	description="Meet the dedicated team behind the Food Safety Training Corporation (FSTC). Our employees are experts in food safety, passionate about their work, and committed to delivering the best training and certification services. Learn about our team and their roles in advancing food safety standards."
+>
 	<main class="pt-20 px-5 md:px-10 min-h-screen">
 		<p class="text-blue-500 font-bold text-2xl mb-5">Our Community</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-5">
@@ -59,22 +62,30 @@ const persons = [
 								{person.name}
 							</h2>
 							<p class="text-gray-700 mb-1">
-								<strong>Employee ID:</strong>{" "}
+								<span class="font-semibold">Employee ID:</span>{" "}
 								{person.employeeId}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<strong>Position:</strong> {person.position}
+								<span class="font-semibold">Position:</span>{" "}
+								{person.position}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<strong>Father's Name:</strong>{" "}
+								<span class="font-semibold">
+									Father's Name:
+								</span>{" "}
 								{person.fatherName}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<strong>Mother's Name:</strong>{" "}
+								<span class="font-semibold">
+									Mother's Name:
+								</span>{" "}
 								{person.motherName}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<strong>Date of Birth:</strong> {person.dob}
+								<span class="font-semibold">
+									Date of Birth:
+								</span>{" "}
+								{person.dob}
 							</p>
 						</div>
 					</div>
@@ -83,5 +94,3 @@ const persons = [
 		</div>
 	</main>
 </Layout>
-
-<style></style>
