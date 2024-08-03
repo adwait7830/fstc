@@ -9,27 +9,35 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="google-site-verification" content="xqbnuiidq7byLdXwOniBtrMlt70iempcMnH1_BN4RNY" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="google-site-verification"
+			content="xqbnuiidq7byLdXwOniBtrMlt70iempcMnH1_BN4RNY"
+		/>
 		<meta
 			name="description"
 			content="Food Safety Training Corporation is a leading provider of food safety training in India, offering expert courses and certifications for individuals and organizations."
 		/>
-
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/title-image.png" />
 		<meta
 			name="keywords"
 			content="Food Safety Training, Food Safety Certification, Food Safety Courses, Food Safety India, Food Safety Training Corporation"
 		/>
 		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="index, follow" />
 		<title>{title}</title>
+		<link rel="icon" type="image/png" href="/title-image.png" />
 		<meta property="og:title" content={title} />
 		<meta
 			property="og:description"
 			content="Leading provider of food safety training in India. Our expert courses and certifications are designed to ensure compliance and excellence in food safety."
 		/>
 		<meta property="og:image" content="/title-image.png" />
+		<meta
+			property="og:image:alt"
+			content="Food Safety Training Corporation Logo"
+		/>
 		<meta property="og:url" content="https://fstc.vercel.app/" />
+		<meta property="og:type" content="website" />
 	</head>
 	<body>
 		<Navbar />

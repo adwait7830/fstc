@@ -1,7 +1,4 @@
----
-//write any js here
----
-
+<!-- Navbar Component -->
 <section class="">
   <nav
     class="bg-white border-b-2 fixed top-0 left-0 right-0 z-50 lg:flex justify-between items-center py-3 px-3 md:px-12 transition-all"
@@ -31,7 +28,7 @@
 
     <ul
       id="menu"
-      class="hidden lg:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-7 text-lg font-medium mt-4 lg:mt-0 "
+      class="hidden lg:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-7 text-lg font-medium mt-4 lg:mt-0"
     >
       <li class="hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
       <li class="hover:border-b-2 border-blue-500">
@@ -41,7 +38,10 @@
         <a href="/vacancy">Vacancy</a>
       </li>
       <li class="hover:border-b-2 border-blue-500">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJIrfEuuqveKZUwIT7rSy-T1HUT8qITuBcDSbfe3iUU6SMQ/viewform">Contact Us</a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScCJIrfEuuqveKZUwIT7rSy-T1HUT8qITuBcDSbfe3iUU6SMQ/viewform"
+          >Contact Us</a
+        >
       </li>
       <li class="hover:border-b-2 border-blue-500">
         <a href="/about">About</a>
@@ -51,17 +51,16 @@
       </li>
     </ul>
   </nav>
+  <script is:inline>
+    document
+      .getElementById("menu-toggle")
+      .addEventListener("click", function () {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+        }
+      });
+  </script>
 </section>
-<script is:inline>
-  document.getElementById("menu-toggle").addEventListener("click", function () {
-    var menu = document.getElementById("menu");
-    if (menu.classList.contains("hidden")) {
-      menu.classList.remove("hidden");
-    } else {
-      menu.classList.add("hidden");
-    }
-  });
-</script>
-<style>
-  /*write any css here*/
-</style>

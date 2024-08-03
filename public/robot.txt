@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://fstc.vercel.app/sitemap.xml
