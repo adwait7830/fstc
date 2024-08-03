@@ -23,12 +23,12 @@ const { title } = Astro.props;
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<meta property="og:title" content="<%= pageTitle %>" />
+		<meta property="og:title" content={title} />
 		<meta
 			property="og:description"
 			content="Leading provider of food safety training in India. Our expert courses and certifications are designed to ensure compliance and excellence in food safety."
 		/>
-		<meta property="og:image" content="/fstc.png" />
+		<meta property="og:image" content="/title-image.png" />
 		<meta property="og:url" content="https://fstc.vercel.app/" />
 	</head>
 	<body>
