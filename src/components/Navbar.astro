@@ -1,0 +1,67 @@
+---
+//write any js here
+---
+
+<section class="">
+  <nav
+    class="bg-white border-b-2 fixed top-0 left-0 right-0 z-50 lg:flex justify-between items-center py-3 px-3 md:px-12 transition-all"
+  >
+    <div class="flex justify-between">
+      <div class="navbar-logo">
+        <img class="h-10" src="/fstc.png" alt="logo" />
+      </div>
+      <div class="block lg:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <ul
+      id="menu"
+      class="hidden lg:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-7 text-lg font-medium mt-4 lg:mt-0 "
+    >
+      <li class="hover:border-b-2 border-blue-500"><a href="/">Home</a></li>
+      <li class="hover:border-b-2 border-blue-500">
+        <a href="/vision-mission">Vision & Mission</a>
+      </li>
+      <li class="hover:border-b-2 border-blue-500">
+        <a href="/vacancy">Vacancy</a>
+      </li>
+      <li class="hover:border-b-2 border-blue-500">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScCJIrfEuuqveKZUwIT7rSy-T1HUT8qITuBcDSbfe3iUU6SMQ/viewform">Contact Us</a>
+      </li>
+      <li class="hover:border-b-2 border-blue-500">
+        <a href="/about">About</a>
+      </li>
+      <li class="hover:border-b-2 border-blue-500">
+        <a href="/employees">Employees</a>
+      </li>
+    </ul>
+  </nav>
+</section>
+<script is:inline>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    var menu = document.getElementById("menu");
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+    } else {
+      menu.classList.add("hidden");
+    }
+  });
+</script>
+<style>
+  /*write any css here*/
+</style>

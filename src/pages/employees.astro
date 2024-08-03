@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+const persons = [
+	{
+		name: "Jaspreet Singh",
+		employeeId: "FSTC1001/BH/004/FS",
+		position: "Field Supervisor",
+		fatherName: "Guriqbal Singh",
+		motherName: "Nirmal Kaur",
+		dob: "2002-01-02",
+		photo: "/employees/jasprit-singh.png", // Replace with actual photo URL if available
+	},
+	{
+		name: "Harvinder Kaur",
+		employeeId: "FCTC1001/BH1/001/24",
+		position: "Branch Head",
+		fatherName: "Sadhu Singh",
+		motherName: "Jasveer Kaur",
+		dob: "1982-10-05",
+		photo: "/employees/harvinder-kaur.png", // Replace with actual photo URL if available
+	},
+	{
+		name: "Jaswinder Singh",
+		employeeId: "FSTC1001/ZH/01/24",
+		position: "Zonal Head",
+		fatherName: "Gurjeet Singh",
+		motherName: "Harpal Kaur",
+		dob: "1997-12-03",
+		photo: "/employees/jaswinder-singh.png", // Replace with actual photo URL if available
+	},
+	{
+		name: "Navdeep Singh",
+		employeeId: "",
+		position: "Field Supervisor",
+		fatherName: "Mohinder Singh",
+		motherName: "Sukhdeep Singh",
+		dob: "2001-10-15",
+		photo: "/employees/navdeep-singh.png", // Replace with actual photo URL if available
+	},
+];
+---
+
+<Layout title="FSTC - Home">
+	<main class="pt-20 px-5 md:px-10 min-h-dvh">
+		<p class="text-blue-500 font-bold text-2xl mb-5">Our Community</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-5">
+			{
+				persons.map((person) => (
+					<div class="bg-white shadow-lg rounded-lg flex border-2 border-gray-300 max-w-md mx-auto">
+						<div class="w-1/3 p-2">
+							<img
+								src={person.photo}
+								alt={`Photo of ${person.name}`}
+								class="h-full w-full object-cover rounded-lg"
+							/>
+						</div>
+						<div class="w-2/3 p-4">
+							<h2 class="text-xl font-bold mb-2">
+								{person.name}
+							</h2>
+							<p class="text-gray-700 mb-1">
+								<strong>Employee ID:</strong>{" "}
+								{person.employeeId || "N/A"}
+							</p>
+							<p class="text-gray-700 mb-1">
+								<strong>Position:</strong> {person.position}
+							</p>
+							<p class="text-gray-700 mb-1">
+								<strong>Father's Name:</strong>{" "}
+								{person.fatherName}
+							</p>
+							<p class="text-gray-700 mb-1">
+								<strong>Mother's Name:</strong>{" "}
+								{person.motherName}
+							</p>
+							<p class="text-gray-700 mb-1">
+								<strong>Date of Birth:</strong> {person.dob}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</main>
+</Layout>
+
+<style></style>
