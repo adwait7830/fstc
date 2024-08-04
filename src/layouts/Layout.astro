@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
 const { title,description } = Astro.props;
+const canonicalUrl = Astro.site + Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -39,6 +40,27 @@ const { title,description } = Astro.props;
 		<meta property="og:url" content="https://fstc.vercel.app/" />
 		<meta property="og:type" content="website" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<script is:inline type="application/ld+json">
+			{
+			  "@context": "https://schema.org",
+			  "@type": "Organization",
+			  "name": "Food Safety Training Corporation",
+			  "url": "https://fstc.vercel.app/",
+			  "logo": "https://fstc.vercel.app/title-image.png",
+			  "contactPoint": {
+				"@type": "ContactPoint",
+				"contactType": "Customer Service",
+				"areaServed": "IN",
+				"availableLanguage": "English"
+			  },
+			  "sameAs": [
+				"https://www.facebook.com/FSTC",
+				"https://twitter.com/FSTC"
+			  ]
+			}
+			</script>
 	</head>
 	<body>
 		<Navbar />
