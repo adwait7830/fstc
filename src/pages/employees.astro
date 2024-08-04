@@ -8,7 +8,7 @@ const persons = [
 		fatherName: "Guriqbal Singh",
 		motherName: "Nirmal Kaur",
 		dob: "2002-01-02",
-		photo: "/employees/jasprit-singh.webp", // Replace with actual photo URL if available
+		photo: "/employees/jasprit-singh.webp", 
 	},
 	{
 		name: "Harvinder Kaur",
@@ -17,7 +17,7 @@ const persons = [
 		fatherName: "Sadhu Singh",
 		motherName: "Jasveer Kaur",
 		dob: "1982-10-05",
-		photo: "/employees/harvinder-kaur.webp", // Replace with actual photo URL if available
+		photo: "/employees/harvinder-kaur.webp", 
 	},
 	{
 		name: "Jaswinder Singh",
@@ -26,7 +26,7 @@ const persons = [
 		fatherName: "Gurjeet Singh",
 		motherName: "Harpal Kaur",
 		dob: "1997-12-03",
-		photo: "/employees/jaswinder-singh.webp", // Replace with actual photo URL if available
+		photo: "/employees/jaswinder-singh.webp", 
 	},
 	{
 		name: "Navdeep Singh",
@@ -35,7 +35,7 @@ const persons = [
 		fatherName: "Mohinder Singh",
 		motherName: "Sukhdeep Singh",
 		dob: "2001-10-15",
-		photo: "/employees/navdeep-singh.webp", // Replace with actual photo URL if available
+		photo: "/employees/navdeep-singh.webp", 
 	},
 ];
 ---
@@ -62,30 +62,22 @@ const persons = [
 								{person.name}
 							</h2>
 							<p class="text-gray-700 mb-1">
-								<span class="font-semibold">Employee ID:</span>{" "}
+								<strong>Employee ID:</strong>{" "}
 								{person.employeeId}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<span class="font-semibold">Position:</span>{" "}
-								{person.position}
+								<strong>Position:</strong> {person.position}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<span class="font-semibold">
-									Father's Name:
-								</span>{" "}
+								<strong>Father's Name:</strong>{" "}
 								{person.fatherName}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<span class="font-semibold">
-									Mother's Name:
-								</span>{" "}
+								<strong>Mother's Name:</strong>{" "}
 								{person.motherName}
 							</p>
 							<p class="text-gray-700 mb-1">
-								<span class="font-semibold">
-									Date of Birth:
-								</span>{" "}
-								{person.dob}
+								<strong>Date of Birth:</strong> {person.dob}
 							</p>
 						</div>
 					</div>
