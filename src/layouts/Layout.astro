@@ -2,66 +2,75 @@
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
-const { title,description } = Astro.props;
+const { title, description } = Astro.props;
 const canonicalUrl = Astro.site + Astro.url.pathname;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Meta Charset and Viewport -->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta
-			name="google-site-verification"
-			content="xqbnuiidq7byLdXwOniBtrMlt70iempcMnH1_BN4RNY"
-		/>
-		<meta
-			name="description"
-			content={description}
-		/>
+
+		<!-- Title Tag -->
+		<title>{title}</title>
+
+		<!-- Meta Description -->
+		<meta name="description" content={description} />
+
+		<!-- Meta Keywords -->
 		<meta
 			name="keywords"
-			content="Food Safety Training, Food Safety Certification, Food Safety Courses, Food Safety India, Food Safety Training Corporation"
+			content="Food Safety Training, Food Safety Certification, Food Safety Courses, Food Safety Standards, Food Safety Management, Food Safety Practices, Food Safety Guidelines, Food Safety Procedures, Food Safety Training India, Food Safety Training Courses, FSSAI Certification, FSSAI Training, FSSAI Compliance, FSSAI Guidelines, FSSAI Regulations, FSSAI Food Safety, FSSAI Standards, FSSAI Courses, FSSAI Certification India, FSSAI Food Safety Certification, Food Processing Training, Food Handling Safety, Food Safety Auditor, Food Safety Inspection, Food Safety Quality Assurance, Food Safety Risk Management, Food Safety Certification India, Food Technology Training, Food Safety and Hygiene, Food Safety Compliance, Food Safety for Restaurants, Food Safety for Manufacturers, Food Safety for Retailers, Food Safety for Schools, Food Safety for Healthcare, Food Safety for Food Industry, Food Safety for Food Handlers, Food Safety Training for Staff, Food Safety Workshops, Food Safety Certification for Employees, HACCP Training, HACCP Certification, ISO 22000 Certification, ISO Food Safety Standards, GMP (Good Manufacturing Practices), Food Safety Documentation, Food Safety Awareness, Food Safety Improvement, Food Safety Online Courses, Food Safety Expert, Food Safety Practices India, Food Safety Training Programs, Food Safety Certification Programs, Food Safety Compliance Training, Food Safety Regulations India, Food Safety Courses India, Food Safety Management Systems, FSSAI Compliance Training, FSSAI Certification Courses, FSSAI Standards Compliance, Food Safety Quality Control, Food Safety Protocols, Food Safety Risk Assessment, Food Safety Education, Food Safety Strategies, Food Safety Procedures India, Food Safety Auditing, Food Safety Certification Training, Food Safety Training Institute, Food Safety Resources, Food Safety Strategies India, FSSAI Food Safety Training, FSSAI Certification Process, FSSAI Safety Guidelines, FSSAI Approved Training, Food Safety Risk Mitigation, Food Safety Essentials, Food Safety Improvement Programs, Food Safety Training Workshops, Food Safety Expertise, Food Safety Regulations Compliance, Food Safety Industry Standards, Food Safety Procedures and Guidelines, Food Safety for Food Production, Food Safety for Food Services, Food Safety Certification for Food Businesses, Food Safety Awareness Programs, Food Safety Management Certification, Food Safety Practices for Restaurants, Food Safety Monitoring, Food Safety Enforcement, Food Safety Knowledge, Food Safety Best Practices"
 		/>
-		<meta name="generator" content={Astro.generator} />
+
+		<!-- Canonical Link -->
+		<link rel="canonical" href={canonicalUrl} />
+
+		<!-- Meta Robots -->
 		<meta name="robots" content="index, follow" />
-		<title>{title}</title>
-		<link rel="icon" type="image/png" href="/title-image.png" />
+
+		<!-- Meta Open Graph Tags -->
 		<meta property="og:title" content={title} />
-		<meta
-			property="og:description"
-			content={description}
-		/>
-		<meta property="og:image" content="/title-image.png" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/title-image.webp" />
 		<meta
 			property="og:image:alt"
 			content="Food Safety Training Corporation Logo"
 		/>
 		<meta property="og:url" content="https://fstc.vercel.app/" />
 		<meta property="og:type" content="website" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="canonical" href={canonicalUrl} />
 
+		<!-- Link Tags -->
+		<link rel="icon" type="image/webp" href="/title-image.webp" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
+		<!-- Schema.org JSON-LD -->
 		<script is:inline type="application/ld+json">
 			{
-			  "@context": "https://schema.org",
-			  "@type": "Organization",
-			  "name": "Food Safety Training Corporation",
-			  "url": "https://fstc.vercel.app/",
-			  "logo": "https://fstc.vercel.app/title-image.png",
-			  "contactPoint": {
-				"@type": "ContactPoint",
-				"contactType": "Customer Service",
-				"areaServed": "IN",
-				"availableLanguage": "English"
-			  },
-			  "sameAs": [
-				"https://www.facebook.com/FSTC",
-				"https://twitter.com/FSTC"
-			  ]
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				"name": "Food Safety Training Corporation",
+				"url": "https://fstc.vercel.app/",
+				"logo": "https://fstc.vercel.app/title-image.webp",
+				"contactPoint": {
+					"@type": "ContactPoint",
+					"contactType": "Customer Service",
+					"areaServed": "IN",
+					"availableLanguage": "English"
+				},
+				"sameAs": [
+					"https://www.facebook.com/FSTC",
+					"https://twitter.com/FSTC"
+				]
 			}
-			</script>
+		</script>
+
+		<!-- Generator Tag (if necessary) -->
+		<meta name="generator" content={Astro.generator} />
 	</head>
+
 	<body>
 		<Navbar />
 		<slot />
