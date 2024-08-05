@@ -1,54 +1,73 @@
-# Astro Starter Kit: Basics
+# Food Safety Training Corporation Website
+🚀 Welcome to the official website repository for the Food Safety Training Corporation!
 
-```sh
-npm create astro@latest -- --template basics
-```
+This project was developed to provide information and resources for food safety training. The website is built with AstroJS and Tailwind CSS and is hosted on Vercel. Additionally, several SEO strategies have been implemented to improve the website's visibility and reach.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Table of Contents
+- [Live Website](#live-website)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [SEO Implementation](#seo-implementation)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Live Website
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Check out the live website here: [fstc.vercel.app](https://fstc.vercel.app)
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- Responsive design with Tailwind CSS
+- Optimized for SEO
+- Fast and lightweight with AstroJS
+- Deployed on Vercel for seamless performance
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Technologies Used
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- **AstroJS**: For building fast and modern web applications
+- **Tailwind CSS**: For styling and responsive design
+- **Vercel**: For hosting and deployment
+- **SEO**: Various strategies for improving search engine visibility
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Getting Started
 
-Any static assets, like images, can be placed in the `public/` directory.
+To get a local copy up and running, follow these steps.
 
-## 🧞 Commands
+### Prerequisites
 
-All commands are run from the root of the project, from a terminal:
+Make sure you have the following installed:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Node.js
+- npm (or yarn)
 
-## 👀 Want to learn more?
+### Installation
+- Clone the repo
+` git clone https://github.com/your-username/your-repo-name.git `
+- Install NPM packages
+`npm install`
+- Start the development server
+`npm run dev`
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## SEO Implementation
+We have implemented several SEO strategies to ensure the website ranks well in search engines. These include:
+
+- Proper use of HTML tags (title, meta description, headings)
+- Optimized content with relevant keywords
+- JSON-LD schema for structured data
+
+## Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+- Fork the Project
+- Create your Feature Branch (git checkout -b feature/AmazingFeature)
+- Commit your Changes (git commit -m 'Add some AmazingFeature')
+- Push to the Branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
+
+## Contact
+Food Safety Training Corporation - infoindiafstc@gmail.com.
