@@ -1,5 +1,5 @@
 ---
-var isHome = Astro.url.pathname === '/';
+var route = Astro.url.pathname;
 ---
 
 <!-- Navbar Component -->
@@ -9,7 +9,7 @@ var isHome = Astro.url.pathname === '/';
   >
     <div class="flex justify-between">
       <div class="navbar-logo">
-        <img  height="60" width="100" src="/fstc.webp" alt="logo" />
+        <img height="60" width="100" src="/fstc.webp" alt="logo" />
       </div>
       <div class="block lg:hidden">
         <button id="menu-toggle" class="focus:outline-none" name="menu button">
@@ -34,23 +34,42 @@ var isHome = Astro.url.pathname === '/';
       id="menu"
       class="hidden lg:flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-7 text-lg font-medium mt-4 lg:mt-0"
     >
-      {!isHome && <li class="hover:border-b-2 border-blue-500"><a href="/">Home</a></li> }
-      <li class="hover:border-b-2 border-blue-500">
+      {
+        !(route === "/") && (
+          <li
+            class={`border-b-2 ${route === "/" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+          >
+            <a href="/">Home</a>
+          </li>
+        )
+      }
+      <li
+        class={`border-b-2 ${route === "/vision-mission" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+      >
         <a href="/vision-mission">Vision & Mission</a>
       </li>
-      <li class="hover:border-b-2 border-blue-500">
+      <li
+        class={`border-b-2 ${route === "/vacancy" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+      >
         <a href="/vacancy">Vacancy</a>
       </li>
-      <li class="hover:border-b-2 border-blue-500">
+      <li
+        class={`border-b-2 ${route === "contact-us" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+      >
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScCJIrfEuuqveKZUwIT7rSy-T1HUT8qITuBcDSbfe3iUU6SMQ/viewform"
-          >Contact Us</a
+          target="_blank"
+          rel="noopener">Contact Us</a
         >
       </li>
-      <li class="hover:border-b-2 border-blue-500">
+      <li
+        class={`border-b-2 ${route === "/about" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+      >
         <a href="/about">About</a>
       </li>
-      <li class="hover:border-b-2 border-blue-500">
+      <li
+        class={`border-b-2 ${route === "/employees" ? "border-blue-500" : "border-transparent"} hover:border-blue-500`}
+      >
         <a href="/employees">Employees</a>
       </li>
     </ul>
